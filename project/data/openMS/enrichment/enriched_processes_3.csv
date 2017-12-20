@@ -1,0 +1,18 @@
+Process	Genome_count	significant_count	p-value(sign vs genome)	p-value(sign vs identified)
+Hypothetical	1277	198	0.99999919175	0.953372532139
+Unknown	679	62	1.0	0.993791266397
+Other categories	369	48	0.999861176164	0.956804811748
+Transport and binding proteins	200	28	0.987928792468	0.501420270451
+Translation	168	82	3.15556698409e-18	0.0024436629468
+Regulatory functions	156	27	0.808225597428	0.889803884674
+Photosynthesis and respiration	143	52	1.62816314655e-06	0.00709480946855
+Biosynthesis of cofactors, prosthetic groups, and carriers	125	31	0.0926584734726	0.939217406372
+Amino acid biosynthesis	97	48	2.4375155885e-11	0.0043749334391
+Energy metabolism	93	33	0.000232502827191	0.467251357166
+Cellular processes	80	29	0.000365139514491	0.145664293321
+DNA replication, restriction, modification, recombination, and repair	75	12	0.832179449036	0.876704825353
+Cell envelope	67	19	0.0549787754607	0.714444004535
+Purines, pyrimidines, nucleosides, and nucleotides	43	15	0.0139104159185	0.822818496029
+Fatty acid, phospholipid and sterol metabolism	39	17	0.000548046880692	0.0257814756108
+Central intermediary metabolism	31	10	0.067988761671	0.730965158387
+Transcription	30	13	0.00261723123891	0.034121339927
