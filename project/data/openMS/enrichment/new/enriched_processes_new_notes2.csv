@@ -1,0 +1,42 @@
+process,counts_significant,counts_identified,p_value_depletion,p_value_enrichment,q_value_depletion,depletion_significant,q_value_enrichment,enrichment_significant,,q2,
+Translation,82,128,0.998665935,0.002443663,0.998665935,No,0.037186934,Yes,,0.037186934,1
+Amino acid biosynthesis,48,71,0.997969393,0.004374933,0.998665935,No,0.037186934,Yes,,0.037186934,2
+Photosynthesis and respiration,52,79,0.996429381,0.007094809,0.998665935,No,0.04020392,Yes,,0.04020392,3
+"Fatty acid, phospholipid and sterol metabolism",17,23,0.991677815,0.025781476,0.998665935,No,0.109571271,No,,0.109571271,4
+Transcription,13,17,0.990645134,0.03412134,0.998665935,No,0.116012556,No,,0.116012556,5
+Cellular processes,29,48,0.911823657,0.145664293,0.998665935,No,0.412715498,No,,0.412715498,6
+Energy metabolism,33,62,0.633860942,0.467251357,0.979603273,No,0.993791266,No,,0.993791266,7
+Transport and binding proteins,28,53,0.608907719,0.50142027,0.979603273,No,0.993791266,No,,0.993791266,8
+Cell envelope,19,39,0.404311329,0.714444005,0.811363202,No,0.993791266,No,,0.993791266,9
+Central intermediary metabolism,10,21,0.429545225,0.730965158,0.811363202,No,0.993791266,No,,0.993791266,10
+"Purines, pyrimidines, nucleosides, and nucleotides",15,33,0.282946309,0.822818496,0.687155321,No,0.993791266,No,,0.993791266,11
+"DNA replication, restriction, modification, recombination, and repair",12,28,0.21877585,0.876704825,0.619864907,No,0.993791266,No,,0.993791266,12
+Regulatory functions,27,60,0.168182209,0.889803885,0.57181951,No,0.993791266,No,,0.993791266,13
+"Biosynthesis of cofactors, prosthetic groups, and carriers",31,71,0.096104714,0.939217406,0.408445036,No,0.993791266,No,,0.993791266,14
+Hypothetical,198,408,0.059296968,0.953372532,0.368376549,No,0.993791266,No,,0.993791266,15
+Other categories,48,108,0.065007626,0.956804812,0.368376549,No,0.993791266,No,,0.993791266,16
+Unknown,62,146,0.010051714,0.993791266,0.170879137,No,0.993791266,No,,0.993791266,17
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,"min(p-value * total_number_of_peptides/rank_of_current_peptide, qvalue_for_peptide_one_row_below)",,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,q1,,,,,,,
+,,,Unknown,,0.170879137,,,,,,
+,,,Hypothetical,,0.368376549,,,,,,
+,,,Other categories,,0.368376549,,,,,,
+,,,"Biosynthesis of cofactors, prosthetic groups, and carriers",,0.408445036,,,,,,
+,,,Regulatory functions,,0.57181951,,,,,,
+,,,"DNA replication, restriction, modification, recombination, and repair",,0.619864907,,,,,,
+,,,"Purines, pyrimidines, nucleosides, and nucleotides",,0.687155321,,,,,,
+,,,Cell envelope,,0.811363202,,,,,,
+,,,Central intermediary metabolism,,0.811363202,,,,,,
+,,,Transport and binding proteins,,0.979603273,,,,,,
+,,,Energy metabolism,,0.979603273,,,,,,
+,,,Cellular processes,,0.998665935,,,,,,
+,,,Transcription,,0.998665935,,,,,,
+,,,"Fatty acid, phospholipid and sterol metabolism",,0.998665935,,,,,,
+,,,Photosynthesis and respiration,,0.998665935,,,,,,
+,,,Amino acid biosynthesis,,0.998665935,,,,,,
+,,,Translation,,0.998665935,,,,,,
