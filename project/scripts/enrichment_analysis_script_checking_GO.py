@@ -5,7 +5,7 @@
 #Last edited: 09/01/2018
 
 #input paths
-path_category = "../data/openMS/results/category_loc.csv"
+path_category = "../data/openMS/results/goterm.csv"
 path_sign = "../data/openMS/statistics/sign_genes.csv"
 path_iden = "../data/openMS/statistics/diffacto_q_values.csv"
 
@@ -25,9 +25,9 @@ import numpy as np
 
 #import file with significantly expressed genes:
 sign_df = pd.read_csv(path_sign, header=0, index_col=0, usecols=["protein","f_value","p_value","q_value"])
-cg_df = pd.read_csv(path_category, header=0, index_col=0, usecols=["GeneID","Process"])
+cg_df = pd.read_csv(path_category, header=0, index_col=0, usecols=["gene_id","go_description","go_id"])
 iden_df = pd.read_csv(path_iden, header=0, index_col=0, usecols=["protein","f_value","p_value","q_value"])
-
+"""
 ###calc qvalue###
 def get_q_value(pvals):
 	q_sign = 0.05
@@ -52,7 +52,7 @@ def get_q_value(pvals):
 		else:
 			sign.append("No")
 	return q_vals[::-1], sign[::-1]
-
+"""
 ###ANOVA: significant###
 #get counts for sign proteins
 process_list_sign = []
@@ -72,6 +72,7 @@ counts_df.index.names = ["process"]
 counts_df.columns =["counts_significant"]
 counts_df = counts_df.assign(counts_identified=([0]*17))
 
+"""
 ###Identified###
 #get counts for iden proteins
 process_list_iden = []
@@ -92,6 +93,7 @@ M = len(iden_df)	#total identified genes
 x=counts_df["counts_significant"]	#process counts in significant
 n=counts_df["counts_identified"]	#process counts in identified
 pvalsH = stats.hypergeom.sf(x-1, M, n, N, loc=0)	#perform hypergeometric test
+
 pvalsL = []
 
 #cdf wont accept my input as array/list/df. avoiding the struggle:
@@ -174,6 +176,7 @@ plt.legend(handles=[colour_blue,colour_yel], loc='upper center', bbox_to_anchor=
 plt.subplots_adjust(left=0.5, bottom=0.2)
 plt.savefig("../data/openMS/enrichment/new/enrichment_process_plot_new_norm.png")
 plt.close(fig)
+"""
 """
 ###normalized plot###V2
 norm=[x/M for x in (counts_df_pval["counts_identified"])]
