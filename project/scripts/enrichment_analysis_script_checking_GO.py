@@ -27,6 +27,8 @@ import numpy as np
 sign_df = pd.read_csv(path_sign, header=0, index_col=0, usecols=["protein","f_value","p_value","q_value"])
 cg_df = pd.read_csv(path_category, header=0, index_col=0, usecols=["gene_id","go_description","go_id"])
 iden_df = pd.read_csv(path_iden, header=0, index_col=0, usecols=["protein","f_value","p_value","q_value"])
+
+print(cg_df)
 """
 ###calc qvalue###
 def get_q_value(pvals):
@@ -53,6 +55,25 @@ def get_q_value(pvals):
 			sign.append("No")
 	return q_vals[::-1], sign[::-1]
 """
+"""
+##ignore
+#Make a dictonary of GO-terms:
+go_d = dict()
+goid_d = dict()
+
+for protein,go in zip(cg_df.index.tolist(),cg_df["go_description"]):
+	if protein in go_d:
+		go_d[protein] = go_d[protein] + go
+	else:
+		go_d[protein] = go
+print(go_d)
+"""
+
+
+#new part for GO
+GO_counts = cg_df["go_id"].value_counts()
+print(GO_counts)
+"""
 ###ANOVA: significant###
 #get counts for sign proteins
 process_list_sign = []
@@ -71,6 +92,8 @@ counts_df = pd.DataFrame(counts_sign,process_sign)
 counts_df.index.names = ["process"]
 counts_df.columns =["counts_significant"]
 counts_df = counts_df.assign(counts_identified=([0]*17))
+"""
+
 
 """
 ###Identified###
